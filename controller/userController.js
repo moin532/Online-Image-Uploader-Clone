@@ -10,9 +10,9 @@ const jwt = require("jsonwebtoken")
 exports.register = catchAsyncError(async (req, res, next) => {
 
   
-  // const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-  //   folder: "avatars",
-  // });
+  const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+    folder: "avatars",
+  });
 
   const { name, password, email } = req.body;
 
