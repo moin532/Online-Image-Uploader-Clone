@@ -8,7 +8,7 @@ const {authenticateToken} = require('../middleware/AuthMiddleware');
 router.route("/images").get(getallImage);
 router.route("/image/:id").get(getImagedetails);
 router.route("/image/new").post(authenticateToken,createImage);
-router.route('/admin/images').get(authenticateToken,getAdminProducts )
+router.route('/admin/images').get(getAdminProducts )
 
 router.route("/image/:id").put(updateImage);
 router.route("/image/:id").delete(authenticateToken,Deleteimage);
