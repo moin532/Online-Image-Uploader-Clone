@@ -11,7 +11,7 @@ router.route("/image/new").post(authenticateToken,createImage);
 router.route('/admin/images').get(authenticateToken,getAdminProducts )
 
 router.route("/image/:id").put(updateImage);
-router.route("/image/:id").delete(authenticateToken,Deleteimage);
+router.route("/image/:id").delete(Deleteimage);
 router.route("/review").put(craeteProductReview); //direct use token;
 router.route("/reviews").get(getallReviews);
 router.route("/reviews").delete(authenticateToken,deleteReview);
